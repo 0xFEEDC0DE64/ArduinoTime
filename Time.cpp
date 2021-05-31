@@ -27,17 +27,26 @@
   1.4  5  Sep 2014 - compatibility with Arduino 1.5.7
 */
 
-#if ARDUINO >= 100
-#include <Arduino.h> 
-#else
-#include <WProgram.h> 
-#endif
+//#if ARDUINO >= 100
+//#include <Arduino.h>
+//#else
+//#include <WProgram.h>
+//#endif
 
 #include "TimeLib.h"
+
+#include <esp_timer.h>
 
 static tmElements_t tm;          // a cache of time elements
 static time_t cacheTime;   // the time the cache was updated
 static uint32_t syncInterval = 300;  // time sync will be attempted after this many seconds
+
+namespace {
+unsigned long millis()
+{
+    return esp_timer_get_time() / 1000;
+}
+}
 
 void refreshCache(time_t t) {
   if (t != cacheTime) {

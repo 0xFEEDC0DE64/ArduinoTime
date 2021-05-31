@@ -124,10 +124,10 @@ void    adjustTime(long adjustment);
 
 /* date strings */ 
 #define dt_MAX_STRING_LEN 9 // length of longest date string (excluding terminating null)
-char* monthStr(uint8_t month);
-char* dayStr(uint8_t day);
-char* monthShortStr(uint8_t month);
-char* dayShortStr(uint8_t day);
+//char* monthStr(uint8_t month);
+//char* dayStr(uint8_t day);
+//char* monthShortStr(uint8_t month);
+//char* dayShortStr(uint8_t day);
 	
 /* time sync functions	*/
 timeStatus_t timeStatus(); // indicates if time has been set and recently synchronized
