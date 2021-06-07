@@ -1,5 +1,5 @@
 /*
-  time.c - low level time and date functions
+  ArduinoTime.cpp - low level time and date functions
   Copyright (c) Michael Margolis 2009-2014
 
   This library is free software; you can redistribute it and/or
@@ -33,7 +33,7 @@
 //#include <WProgram.h>
 //#endif
 
-#include "TimeLib.h"
+#include "ArduinoTimeLib.h"
 
 #include <esp_timer.h>
 

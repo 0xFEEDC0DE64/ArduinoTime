@@ -1,11 +1,11 @@
 set(headers
-    Time.h
-    TimeLib.h
+    ArduinoTime.h
+    ArduinoTimeLib.h
 )
 
 set(sources
+    ArduinoTime.cpp
     DateStrings.cpp
-    Time.cpp
 )
 
 set(dependencies
@@ -23,8 +23,6 @@ idf_component_register(
 )
 
 target_compile_options(${COMPONENT_TARGET}
-    PUBLIC
-        -DUSE_FACADE=true
     PRIVATE
         -fstack-reuse=all
         -fstack-protector-all

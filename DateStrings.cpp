@@ -11,7 +11,7 @@
 
 //#include <Arduino.h>
 
-#include "TimeLib.h"
+#include "ArduinoTimeLib.h"
 
  
 // the short strings for each day or month must be exactly dt_SHORT_STR_LEN

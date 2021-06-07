@@ -1,15 +1,14 @@
 /*
-  time.h - low level time and date functions
+  ArduinoTimeLib.h - low level time and date functions
 */
 
 /*
   July 3 2011 - fixed elapsedSecsThisWeek macro (thanks Vincent Valdy for this)
               - fixed  daysToTime_t macro (thanks maniacbug)
-*/     
+*/
 
-#ifndef _Time_h
+#pragma once
 #ifdef __cplusplus
-#define _Time_h
 
 #include <inttypes.h>
 #ifndef __AVR__
@@ -140,5 +139,4 @@ time_t makeTime(const tmElements_t &tm);  // convert time elements into time_t
 
 } // extern "C++"
 #endif // __cplusplus
-#endif /* _Time_h */
 
